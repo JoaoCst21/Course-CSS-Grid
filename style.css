@@ -279,3 +279,27 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
 }
 
+.grid-nested {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sub-item {
+  padding: 1rem;
+  background-color: #ddd;
+  border: medium solid black;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.sub-grid {
+  grid-area: span 2 / span 3;
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: subgrid;
+}
+
