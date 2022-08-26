@@ -14,18 +14,14 @@ html {
 .grid {
   height: 100vh;
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: 1fr 7fr;
+  grid-template-rows: 1fr repeat(2, 3fr) 1fr;
   gap: 5px;
   grid-template-areas:
-  "header header header header header header header header"
-  "nav main main main main main main main"
-  "nav main main main main main main main"
-  "nav main main main main main main main"
-  "nav main main main main main main main"
-  "nav main main main main main main main"
-  "nav main main main main main main main"
-  "footer footer footer footer footer footer footer footer"
+  "header header"
+  "nav main"
+  "nav main"
+  "footer footer"
   ;
 }
 
@@ -89,4 +85,17 @@ main > * {
 .section-upper article:nth-child(2) {
     background-color: red;
 
+}
+
+@media screen and (max-width: 600px){
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr) 5fr 1fr;
+    grid-template-areas:
+    "header"
+    "nav"
+    "main"
+    "footer"
+  ;
+  }
 }
