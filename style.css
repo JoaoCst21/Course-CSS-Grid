@@ -250,3 +250,18 @@ img {
   justify-content: space-evenly;
   align-content: space-evenly;
 }
+
+.grid-min-max {
+  display: grid;
+  /*grid-template-columns: repeat(4, 1fr);*/
+  /*grid-template-columns: repeat(4, minmax(75px, 100px));*/
+  /*grid-template-columns: repeat(4, minmax(min-content, 100px));*/
+  /*grid-template-columns: repeat(4, minmax(min-content, max-content));*/
+  grid-template-columns: repeat(4, minmax(max-content, 200px));
+}
+
+.grid-repeat {
+  display: grid;
+  grid-template-columns: repeat(2, 10% 20% 30%);
+}
+
