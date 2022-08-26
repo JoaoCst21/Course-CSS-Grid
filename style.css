@@ -242,3 +242,11 @@ img {
   justify-self: start;
   align-self: start;
 }
+
+.grid-align-tracks {
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-template-rows: repeat(2, 100px);
+  justify-content: space-evenly;
+  align-content: space-evenly;
+}
